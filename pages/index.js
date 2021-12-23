@@ -19,8 +19,12 @@ export default function Home() {
       {/* navbar */}
       <Nav />
       {/* results */}
-      <Resuls />
+      <Results />
       
     </div>
   )
+}
+
+export async function getServerSideProps(Contex){
+  const genre = contex.query.genre;
 }
