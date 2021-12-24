@@ -1,5 +1,5 @@
 import React from 'react'
-import request from '../utils/request'
+import request from '../utils/requests'
 import{useRouter} from 'next/router'
 
 

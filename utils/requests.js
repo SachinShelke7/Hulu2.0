@@ -1,9 +1,9 @@
-const API_KEY = process.env.API_KEY;
+const API_KEY ='55cf2d3672fed7495d2ce05befcd8640';
 
 export default{
     fetchTrending:{
         title: 'Trending',
-        url: '/trending/all/week?api_key=${API_KEY}&language=en-US'
+        url:`/trending/all/week?api_key=${API_KEY}&language=en-US`
     }, 
     fetchTopRated:{
         title: 'Top Rated',
