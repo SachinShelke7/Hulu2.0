@@ -5,9 +5,9 @@ import Nav from "../components/Nav";
 import Results from "../components/Results";
 import requests from "../utils/requests";
 
-export default function Home(props) {
+export default function Home({ results }) {
 
-  console.log(props)
+  console.log(results)
 
   return (
     <div className={styles.container}>
@@ -21,7 +21,7 @@ export default function Home(props) {
       {/* navbar */}
       <Nav />
       {/* results */}
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
@@ -34,9 +34,10 @@ export async function getServerSideProps(context) {
       requests[genre]?.url || requests.fetchTrending.url
     }`
   ).then((res) => res.json());
-  return {
-    props: {
-      results: request,
-    },
-  };
+
+ return {
+   props: {
+     results: request.results,
+   },
+ };
 }
