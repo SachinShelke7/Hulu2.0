@@ -6,7 +6,7 @@ const Thumbnail=forwardRef(({ result }, ref) => {
   const Base_URL = "https://image.tmdb.org/t/p/original/";
 
   return (
-    <div red={ref} className="cursor-pointer p-2 group transition ease-in-out duration-200 sm:hover:scale-105 hover:z-50">
+    <div ref={ref} className="cursor-pointer p-2 group transition ease-in-out duration-200 sm:hover:scale-105 hover:z-50">
       <Image
         layout="responsive"
         src={
@@ -15,6 +15,7 @@ const Thumbnail=forwardRef(({ result }, ref) => {
         }
         height={1080}
         width={1920}
+        priority
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.overview}</p>
