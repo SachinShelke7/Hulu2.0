@@ -7,8 +7,6 @@ import requests from "../utils/requests";
 
 export default function Home({ results }) {
 
-  console.log(results)
-
   return (
     <div className={styles.container}>
       <Head>
